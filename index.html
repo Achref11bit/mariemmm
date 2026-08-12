@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soft Girl Realm 🎀✨</title>
+  <title>For Doaa 🎀✨</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
       --pink-soft: #fbcfe8;
       --rose-accent: #e11d48;
       --bg-cream: #fff0f5;
-      --glass-bg: rgba(255, 255, 255, 0.72);
-      --glass-border: rgba(244, 114, 182, 0.4);
+      --glass-bg: rgba(255, 255, 255, 0.78);
+      --glass-border: rgba(244, 114, 182, 0.35);
       --text-main: #27272a;
       --text-dim: #71717a;
     }
@@ -36,10 +36,10 @@
       align-items: center;
       overflow-x: hidden;
       position: relative;
-      padding: 20px 14px;
+      padding: 24px 14px;
     }
 
-    /* Soft Girl Glowing Orbs */
+    /* Ambient Soft Orbs */
     .glow-container {
       position: fixed;
       inset: 0;
@@ -78,7 +78,7 @@
       100% { transform: scale(1.1) translate(25px, -25px); }
     }
 
-    /* Floating Girl Sparkles & Bows */
+    /* Floating Particles */
     .sparkle {
       position: absolute;
       color: rgba(244, 114, 182, 0.7);
@@ -94,7 +94,7 @@
       100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
     }
 
-    /* PREMIUM OVERLAY ENTRANCE */
+    /* OVERLAY ENTRANCE */
     #overlay {
       position: fixed;
       inset: 0;
@@ -115,7 +115,7 @@
     }
 
     .overlay-card {
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.7);
       border: 1px solid rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
@@ -125,14 +125,14 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      box-shadow: 0 30px 80px rgba(244, 114, 182, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      box-shadow: 0 30px 80px rgba(244, 114, 182, 0.3);
       text-align: center;
       animation: cardPulse 3s infinite alternate ease-in-out;
     }
 
     @keyframes cardPulse {
-      0% { transform: scale(0.98); box-shadow: 0 25px 60px rgba(244, 114, 182, 0.25); }
-      100% { transform: scale(1.02); box-shadow: 0 35px 90px rgba(244, 114, 182, 0.45); }
+      0% { transform: scale(0.98); }
+      100% { transform: scale(1.02); }
     }
 
     .overlay-bow {
@@ -147,10 +147,9 @@
 
     .overlay-title {
       font-family: 'Instrument Serif', serif;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-style: italic;
       color: #9d174d;
-      letter-spacing: 1px;
     }
 
     .enter-btn {
@@ -164,7 +163,7 @@
       text-transform: uppercase;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 12px 35px rgba(219, 39, 119, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      box-shadow: 0 12px 35px rgba(219, 39, 119, 0.4);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
@@ -173,12 +172,12 @@
       box-shadow: 0 18px 50px rgba(219, 39, 119, 0.55);
     }
 
-    /* Girl Aesthetic Main Card */
+    /* Main Card Layout */
     .card-container {
       position: relative;
       z-index: 10;
       width: 100%;
-      max-width: 450px;
+      max-width: 460px;
       opacity: 0;
       transform: translateY(30px) scale(0.95);
       transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
@@ -196,11 +195,10 @@
       -webkit-backdrop-filter: blur(30px);
       border-radius: 36px;
       padding: 44px 34px;
-      box-shadow: 0 25px 60px rgba(244, 114, 182, 0.18), 0 10px 20px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 25px 60px rgba(244, 114, 182, 0.18);
       display: flex;
       flex-direction: column;
-      gap: 24px;
-      position: relative;
+      gap: 22px;
     }
 
     .bow-icon {
@@ -224,7 +222,7 @@
 
     h1 {
       font-family: 'Instrument Serif', serif;
-      font-size: 2.7rem;
+      font-size: 2.6rem;
       font-weight: 400;
       font-style: italic;
       line-height: 1.15;
@@ -234,7 +232,7 @@
     }
 
     .message {
-      font-size: 0.95rem;
+      font-size: 0.94rem;
       font-weight: 400;
       line-height: 1.85;
       color: #52525b;
@@ -245,7 +243,7 @@
       font-weight: 600;
     }
 
-    /* Pink Girl Audio Player */
+    /* Player Component */
     .player {
       background: rgba(255, 255, 255, 0.85);
       border: 1px solid rgba(244, 114, 182, 0.3);
@@ -313,61 +311,56 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 600;
-      transition: opacity 0.2s;
-    }
-
-    .controls-btn:hover {
-      opacity: 0.8;
     }
 
     @media (max-width: 480px) {
       .card {
         padding: 34px 24px;
-        gap: 20px;
+        gap: 18px;
       }
       .overlay-card {
         padding: 40px 24px;
       }
       h1 {
-        font-size: 2.3rem;
+        font-size: 2.2rem;
       }
       .message {
-        font-size: 0.92rem;
+        font-size: 0.9rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Background Orbs -->
+  <!-- Ambient Light Background -->
   <div class="glow-container">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
   </div>
 
-  <!-- Luxury Entry Overlay -->
+  <!-- Entry Overlay -->
   <div id="overlay">
     <div class="overlay-card">
       <div class="overlay-bow">🎀</div>
-      <div class="overlay-title">A Special Space</div>
-      <button class="enter-btn" onclick="startExperience()">For You 🎀✨</button>
+      <div class="overlay-title">For Doaa ✨</div>
+      <button class="enter-btn" onclick="startExperience()">Open This 🎀✨</button>
     </div>
   </div>
 
-  <!-- Card Content -->
+  <!-- Main Content Card -->
   <div class="card-container" id="mainContainer">
     <div class="card">
       <div class="bow-icon">🎀</div>
-      <span class="badge">Soft World</span>
+      <span class="badge">A Note For You</span>
 
-      <h1>Glad you're in my world.</h1>
+      <h1>Hey Doaa...</h1>
 
       <div class="message">
-        Some people just have this quiet way of making everything feel a little warmer and easier.<br><br>
-        <span>I made this space just for you.</span> Welcome into my life; having you around makes every single moment brighter.
+        I know things got messy between us lately, and somehow we kept falling into this pattern of talking, overthinking, and pulling away... but honestly, you’ve always held a really special place in my heart.<br><br>
+        <span>I'm truly sorry for anything I said or did that hurt you.</span> I really don't want this silence to be how things end between us—I just miss the good energy and connection we shared.
       </div>
 
-      <!-- Player Section -->
+      <!-- Player Component -->
       <div class="player" id="playerBox">
         <div class="track-meta">
           <div class="equalizer">
@@ -385,7 +378,7 @@
     </div>
   </div>
 
-  <!-- Local GitHub Repository Audio File -->
+  <!-- Local Audio File -->
   <audio id="bgAudio" loop preload="auto">
     <source src="best part _ summertime sadness x i wanna be yours instrumental - sped up.mp3" type="audio/mpeg">
   </audio>
@@ -419,7 +412,7 @@
       }
     }
 
-    // Floating Girl Elements (Bows, Hearts, Sparkles)
+    /* Floating Bows & Sparkles Particles */
     function createGirlParticle() {
       const particle = document.createElement('div');
       particle.classList.add('sparkle');
