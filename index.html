@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soft Girl Realm 🎀✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink-primary: #f472b6;
+      --pink-soft: #fbcfe8;
+      --rose-accent: #e11d48;
+      --bg-cream: #fff0f5;
+      --glass-bg: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(244, 114, 182, 0.4);
+      --text-main: #27272a;
+      --text-dim: #71717a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg-cream);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+      padding: 20px 14px;
+    }
+
+    /* Soft Girl Glowing Orbs */
+    .glow-container {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.65;
+      animation: girlFloat 10s infinite alternate ease-in-out;
+    }
+
+    .orb-1 {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, #fbcfe8 0%, #f472b6 100%);
+      top: -15%;
+      left: -5%;
+    }
+
+    .orb-2 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #ffe4e6 0%, #e9d5ff 100%);
+      bottom: -15%;
+      right: -5%;
+      animation-delay: -5s;
+    }
+
+    @keyframes girlFloat {
+      0% { transform: scale(1) translate(0, 0); }
+      100% { transform: scale(1.1) translate(25px, -25px); }
+    }
+
+    /* Floating Girl Sparkles & Bows */
+    .sparkle {
+      position: absolute;
+      color: rgba(244, 114, 182, 0.7);
+      pointer-events: none;
+      z-index: 2;
+      animation: floatUp linear infinite;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(105vh) rotate(0deg); opacity: 0; }
+      20% { opacity: 0.95; }
+      80% { opacity: 0.95; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Entry Overlay */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: #fff0f5;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+    }
+
+    #overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .enter-btn {
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--glass-border);
+      color: #db2777;
+      padding: 18px 42px;
+      border-radius: 100px;
+      font-size: 0.82rem;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 30px rgba(244, 114, 182, 0.25);
+    }
+
+    .enter-btn:hover {
+      background: #db2777;
+      border-color: #db2777;
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(219, 39, 119, 0.35);
+    }
+
+    /* Girl Aesthetic Card */
+    .card-container {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: 450px;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+    }
+
+    .card-container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card {
+      background: var(--glass-bg);
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      border-radius: 36px;
+      padding: 44px 34px;
+      box-shadow: 0 25px 60px rgba(244, 114, 182, 0.18), 0 10px 20px rgba(0, 0, 0, 0.02);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+
+    .bow-icon {
+      font-size: 1.8rem;
+      align-self: flex-start;
+      margin-bottom: -10px;
+    }
+
+    .badge {
+      align-self: flex-start;
+      font-size: 0.65rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #db2777;
+      background: rgba(251, 207, 232, 0.65);
+      padding: 6px 16px;
+      border-radius: 100px;
+      border: 1px solid rgba(244, 114, 182, 0.35);
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 2.7rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.15;
+      background: linear-gradient(135deg, #18181b 30%, #db2777 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .message {
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: #52525b;
+    }
+
+    .message span {
+      color: #9d174d;
+      font-weight: 600;
+    }
+
+    /* Pink Girl Audio Player */
+    .player {
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(244, 114, 182, 0.3);
+      border-radius: 22px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 6px;
+      box-shadow: 0 8px 25px rgba(244, 114, 182, 0.1);
+    }
+
+    .track-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .equalizer {
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+      height: 16px;
+    }
+
+    .eq-bar {
+      width: 2px;
+      background: #db2777;
+      height: 100%;
+      border-radius: 2px;
+      animation: wave 1.2s ease-in-out infinite alternate;
+    }
+
+    .eq-bar:nth-child(2) { animation-delay: 0.25s; }
+    .eq-bar:nth-child(3) { animation-delay: 0.5s; }
+
+    .player.paused .eq-bar {
+      animation-play-state: paused;
+      height: 25%;
+    }
+
+    @keyframes wave {
+      0% { height: 20%; }
+      100% { height: 100%; }
+    }
+
+    .song-title {
+      font-size: 0.82rem;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .artist-name {
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+
+    .controls-btn {
+      background: none;
+      border: none;
+      color: #db2777;
+      cursor: pointer;
+      font-size: 0.72rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .controls-btn:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 34px 24px;
+        gap: 20px;
+      }
+      h1 {
+        font-size: 2.3rem;
+      }
+      .message {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Orbs -->
+  <div class="glow-container">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+  </div>
+
+  <!-- Entry Overlay -->
+  <div id="overlay">
+    <button class="enter-btn" onclick="startExperience()">For You 🎀✨</button>
+  </div>
+
+  <!-- Card Content -->
+  <div class="card-container" id="mainContainer">
+    <div class="card">
+      <div class="bow-icon">🎀</div>
+      <span class="badge">Soft World</span>
+
+      <h1>Glad you're in my world.</h1>
+
+      <div class="message">
+        Some people just have this quiet way of making everything feel a little warmer and easier.<br><br>
+        <span>I made this space just for you.</span> Welcome into my life; having you around makes every single moment brighter.
+      </div>
+
+      <!-- Player Section -->
+      <div class="player" id="playerBox">
+        <div class="track-meta">
+          <div class="equalizer">
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+            <div class="eq-bar"></div>
+          </div>
+          <div>
+            <div class="song-title">Topic</div>
+            <div class="artist-name">Audio Track</div>
+          </div>
+        </div>
+        <button class="controls-btn" id="muteBtn" onclick="toggleAudio()">Mute</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local GitHub Repository Audio File -->
+  <audio id="bgAudio" loop preload="auto">
+    <source src="best part _ summertime sadness x i wanna be yours instrumental - sped up.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const audio = document.getElementById('bgAudio');
+    const overlay = document.getElementById('overlay');
+    const mainContainer = document.getElementById('mainContainer');
+    const playerBox = document.getElementById('playerBox');
+    const muteBtn = document.getElementById('muteBtn');
+
+    function startExperience() {
+      overlay.classList.add('hidden');
+      mainContainer.classList.add('visible');
+      
+      audio.volume = 0.55;
+      audio.play().catch(err => {
+        console.log('Autoplay restriction handled:', err);
+      });
+    }
+
+    function toggleAudio() {
+      if (audio.muted) {
+        audio.muted = false;
+        muteBtn.innerText = 'Mute';
+        playerBox.classList.remove('paused');
+      } else {
+        audio.muted = true;
+        muteBtn.innerText = 'Unmute';
+        playerBox.classList.add('paused');
+      }
+    }
+
+    // Floating Girl Elements (Bows, Hearts, Sparkles)
+    function createGirlParticle() {
+      const particle = document.createElement('div');
+      particle.classList.add('sparkle');
+      
+      const icons = ['🎀', '✨', '🌸', '💖'];
+      particle.innerText = icons[Math.floor(Math.random() * icons.length)];
+      
+      particle.style.left = Math.random() * 100 + "vw";
+      particle.style.animationDuration = (Math.random() * 4 + 7) + "s";
+      particle.style.fontSize = (Math.random() * 6 + 12) + "px";
+      document.body.appendChild(particle);
+
+      setTimeout(() => particle.remove(), 11000);
+    }
+
+    setInterval(createGirlParticle, 650);
+  </script>
+</body>
+</html>
