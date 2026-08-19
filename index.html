@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Doaa 🎀✨</title>
+  <title>For Samar 🎀✨</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
       --pink-soft: #fbcfe8;
       --rose-accent: #e11d48;
       --bg-cream: #fff0f5;
-      --glass-bg: rgba(255, 255, 255, 0.78);
+      --glass-bg: rgba(255, 255, 255, 0.82);
       --glass-border: rgba(244, 114, 182, 0.35);
       --text-main: #27272a;
       --text-dim: #71717a;
@@ -194,21 +194,39 @@
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
       border-radius: 36px;
-      padding: 44px 34px;
+      padding: 36px 30px;
       box-shadow: 0 25px 60px rgba(244, 114, 182, 0.18);
       display: flex;
       flex-direction: column;
-      gap: 22px;
+      gap: 20px;
     }
 
-    .bow-icon {
-      font-size: 1.8rem;
-      align-self: flex-start;
-      margin-bottom: -10px;
+    /* Header Profile Image Styling */
+    .profile-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .profile-img-box {
+      position: relative;
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      padding: 3px;
+      background: linear-gradient(135deg, #f472b6, #db2777);
+      box-shadow: 0 8px 20px rgba(219, 39, 119, 0.25);
+    }
+
+    .profile-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
     }
 
     .badge {
-      align-self: flex-start;
       font-size: 0.65rem;
       letter-spacing: 2.5px;
       text-transform: uppercase;
@@ -222,7 +240,7 @@
 
     h1 {
       font-family: 'Instrument Serif', serif;
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       font-weight: 400;
       font-style: italic;
       line-height: 1.15;
@@ -315,8 +333,8 @@
 
     @media (max-width: 480px) {
       .card {
-        padding: 34px 24px;
-        gap: 18px;
+        padding: 30px 22px;
+        gap: 16px;
       }
       .overlay-card {
         padding: 40px 24px;
@@ -326,6 +344,10 @@
       }
       .message {
         font-size: 0.9rem;
+      }
+      .profile-img-box {
+        width: 75px;
+        height: 75px;
       }
     }
   </style>
@@ -342,7 +364,7 @@
   <div id="overlay">
     <div class="overlay-card">
       <div class="overlay-bow">🎀</div>
-      <div class="overlay-title">For Doaa ✨</div>
+      <div class="overlay-title">For Samar ✨</div>
       <button class="enter-btn" onclick="startExperience()">Open This 🎀✨</button>
     </div>
   </div>
@@ -350,14 +372,19 @@
   <!-- Main Content Card -->
   <div class="card-container" id="mainContainer">
     <div class="card">
-      <div class="bow-icon">🎀</div>
-      <span class="badge">A Note For You</span>
+      <div class="profile-wrapper">
+        <div class="profile-img-box">
+          <!-- badal el-ism mta3 el tswira sammiha samar.jpg fel dosi mta3ek -->
+          <img src="samar.jpg" alt="Samar" class="profile-img">
+        </div>
+        <span class="badge">A Note For You</span>
+      </div>
 
-      <h1>Hey Doaa...</h1>
+      <h1>Hey Samar...</h1>
 
       <div class="message">
-        I know things got messy between us lately, and somehow we kept falling into this pattern of talking, overthinking, and pulling away... but honestly, you’ve always held a really special place in my heart.<br><br>
-        <span>I'm truly sorry for anything I said or did that hurt you.</span> I really don't want this silence to be how things end between us—I just miss the good energy and connection we shared.
+        Malgre mazalna ki dkhalna fi hayet baadhna, ama men awel nhar hsist illi binatna haja speciale w 9riba barcha.<br><br>
+        <span>Aychak ala thi9tek fiyya men awel nhar.</span> Ena melha9 merta7 barcha m3ak, w nheb nebniw hajet mazyanat w thi9a 9wiya binatna.
       </div>
 
       <!-- Player Component -->
