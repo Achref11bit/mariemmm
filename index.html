@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Samar 🎀✨</title>
+  <title>For You 🎀✨</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,7 +39,6 @@
       padding: 24px 14px;
     }
 
-    /* Ambient Soft Orbs */
     .glow-container {
       position: fixed;
       inset: 0;
@@ -78,7 +77,6 @@
       100% { transform: scale(1.1) translate(25px, -25px); }
     }
 
-    /* Floating Particles */
     .sparkle {
       position: absolute;
       color: rgba(244, 114, 182, 0.7);
@@ -94,7 +92,6 @@
       100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
     }
 
-    /* OVERLAY ENTRANCE */
     #overlay {
       position: fixed;
       inset: 0;
@@ -172,7 +169,6 @@
       box-shadow: 0 18px 50px rgba(219, 39, 119, 0.55);
     }
 
-    /* Main Card Layout */
     .card-container {
       position: relative;
       z-index: 10;
@@ -194,36 +190,21 @@
       backdrop-filter: blur(30px);
       -webkit-backdrop-filter: blur(30px);
       border-radius: 36px;
-      padding: 36px 30px;
+      padding: 40px 30px;
       box-shadow: 0 25px 60px rgba(244, 114, 182, 0.18);
       display: flex;
       flex-direction: column;
       gap: 20px;
     }
 
-    /* Header Profile Image Styling */
-    .profile-wrapper {
+    .header-box {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .profile-img-box {
-      position: relative;
-      width: 85px;
-      height: 85px;
-      border-radius: 50%;
-      padding: 3px;
-      background: linear-gradient(135deg, #f472b6, #db2777);
-      box-shadow: 0 8px 20px rgba(219, 39, 119, 0.25);
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid #ffffff;
+    .bow-icon {
+      font-size: 1.8rem;
     }
 
     .badge {
@@ -250,7 +231,7 @@
     }
 
     .message {
-      font-size: 0.94rem;
+      font-size: 0.93rem;
       font-weight: 400;
       line-height: 1.85;
       color: #52525b;
@@ -261,7 +242,6 @@
       font-weight: 600;
     }
 
-    /* Player Component */
     .player {
       background: rgba(255, 255, 255, 0.85);
       border: 1px solid rgba(244, 114, 182, 0.3);
@@ -343,50 +323,44 @@
         font-size: 2.2rem;
       }
       .message {
-        font-size: 0.9rem;
-      }
-      .profile-img-box {
-        width: 75px;
-        height: 75px;
+        font-size: 0.88rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient Light Background -->
   <div class="glow-container">
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
   </div>
 
-  <!-- Entry Overlay -->
   <div id="overlay">
     <div class="overlay-card">
       <div class="overlay-bow">🎀</div>
-      <div class="overlay-title">For Samar ✨</div>
+      <div class="overlay-title">For You ✨</div>
       <button class="enter-btn" onclick="startExperience()">Open This 🎀✨</button>
     </div>
   </div>
 
-  <!-- Main Content Card -->
   <div class="card-container" id="mainContainer">
     <div class="card">
-      <div class="profile-wrapper">
-        <div class="profile-img-box">
-          <img src="775904897_17955415752207754_4699665931404303957_n.jpg" alt="Samar" class="profile-img">
-        </div>
+      <div class="header-box">
+        <div class="bow-icon">🎀</div>
         <span class="badge">A Note For You</span>
       </div>
 
-      <h1>Hey Samar...</h1>
+      <h1>Hey My Love...</h1>
 
       <div class="message">
-        Malgre mazalna ki dkhalna fi hayet baadhna, ama men awel nhar hsist illi binatna haja speciale w 9riba barcha.<br><br>
-        <span>Aychak ala thi9tek fiyya men awel nhar.</span> Ena melha9 merta7 barcha m3ak, w nheb nebniw hajet mazyanat w thi9a 9wiya binatna.
+        Even though we just stepped into each other's lives, from day one I felt something truly special between us.<br><br>
+        <span>Thank you for trusting me.</span> I genuinely feel so comfortable around you... I want us to take things step by step, with zero pressure, and build strong trust between us from the ground up.<br><br>
+        Every little moment we share already means so much to me.<br>
+        You bring a sense of peace that I didn't even know I was missing.<br>
+        Whatever time we need, I'll be right here enjoying every step with you.<br>
+        <span>I'm just really happy to have you in my life.</span>
       </div>
 
-      <!-- Player Component -->
       <div class="player" id="playerBox">
         <div class="track-meta">
           <div class="equalizer">
@@ -404,7 +378,6 @@
     </div>
   </div>
 
-  <!-- Local Audio File -->
   <audio id="bgAudio" loop preload="auto">
     <source src="best part _ summertime sadness x i wanna be yours instrumental - sped up.mp3" type="audio/mpeg">
   </audio>
@@ -438,7 +411,6 @@
       }
     }
 
-    /* Floating Bows & Sparkles Particles */
     function createGirlParticle() {
       const particle = document.createElement('div');
       particle.classList.add('sparkle');
